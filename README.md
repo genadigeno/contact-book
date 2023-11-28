@@ -13,7 +13,7 @@ You can run the project using docker-compose.yml via Docker.
 4. `docker compose up`
 
 ### Base URL
-- [[http://localhost:9898](http://localhost:9898/swagger-ui/index.html#/)](http://localhost:9898/swagger-ui/index.html#/)
+- http://localhost:9898/swagger-ui/index.html#/
 
 Contact CRUD Operations
 
