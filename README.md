@@ -17,21 +17,21 @@ You can run the project using docker-compose.yml via Docker.
 
 Contact CRUD Operations
 
-| Title             | URL                                            | Required RequestBody | Authorization Required |
-|-------------------|------------------------------------------------|----------------------|------------------------|
-| get all books     | GET /api/contacts?page=<int>&size=<int>        | No                   | Yes                    |
-| get contact by id | GET /api/contacts/{contactId}                  | No                   | Yes                    |
-| create contact    | PUT /api/contacts                              | Yes                  | Yes                    | 
-| update contact    | POST /api/contacts                             | Yes                  | Yes                    |
-| delete contact    | DELETE /api/contacts                           | No                   | Yes                    | 
-| search contacts   | GET /api/contacts/search?page=<int>&size=<int> | Optional             | Yes                    |
+| Title             | URL                                            | Required RequestBody                                                                                                                         | Authorization Required |
+|-------------------|------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| get all books     | GET /api/contacts?page=<int>&size=<int>        | No                                                                                                                                           | Yes                    |
+| get contact by id | GET /api/contacts/{contactId}                  | No                                                                                                                                           | Yes                    |
+| create contact    | PUT /api/contacts                              | Yes:<br/>{<br/>"mobile": "string",<br/>"email": "string",<br/>"city": "string",<br/>"country": "string",<br/>"address": "string"<br/>}       | Yes                    | 
+| update contact    | POST /api/contacts                             | Yes:<br/>{<br/>"mobile": "string",<br/>"email": "string",<br/>"city": "string",<br/>"country": "string",<br/>"address": "string"<br/>}       | Yes                    |
+| delete contact    | DELETE /api/contacts                           | No                                                                                                                                           | Yes                    | 
+| search contacts   | GET /api/contacts/search?page=<int>&size=<int> | Optional: <br/>{<br/>"mobile": "string",<br/>"email": "string",<br/>"city": "string",<br/>"country": "string",<br/>"address": "string"<br/>} | Yes                    |
 
 Authorization Operations
 
-| Title           | URL                     | Required RequestBody | Authorization Required |
-|-----------------|-------------------------|----------------------|------------------------|
-| register a user | POST /api/auth/register | Yes                  | NO                     |
-| lorin a user    | POST /api/auth/login    | Yes                  | NO                     |
+| Title           | URL                     | Required RequestBody                                                                                                                                       | Authorization Required |
+|-----------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| register a user | POST /api/auth/register | Yes:<br/>{<br/>"username": "string",<br/>"password": "string",<br/>"repeatedPassword": "string",<br/>"firstname": "string",<br/>"lastname": "string"<br/>} | NO                     |
+| lorin a user    | POST /api/auth/login    | Yes:<br/>{<br/>"username": "string",<br/>"password": "string"<br/>}                                                                                        | NO                     |
 
 Used Technologies:
 * Java 17
